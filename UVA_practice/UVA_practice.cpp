@@ -6,9 +6,6 @@
 
 int main()
 {
-	std::cout << "Git Repo";
-	// Git Repository
-	// https://github.com/rahul-g/UVA_practice
 
 	// This is the next change
 	// and next to next change
