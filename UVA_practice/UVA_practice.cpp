@@ -4,21 +4,77 @@
 #include "pch.h"
 #include <iostream>
 
+typedef	struct phonebook
+{
+	char *name;
+	phonebook *next;
+	phonebook *prev;
+} phonebook;
+
+void clear_phonebook();
+void initialize_phonebook();
+void add_to_phonebook(const char *data);
+int new_node_position();
+phonebook* get_node(const char *data);
+
+int Strlen(const char* data);
+
+int phonebook_size;
+
+
 int main()
 {
+	for (int tc = 0; tc < 5; tc++)
+	{
+		initialize_phonebook();
 
-	// This is the next change
-	// and next to next change
+		add_to_phonebook("Rahul");
+		add_to_phonebook("Avnish");
+		add_to_phonebook("Saurabh");
+		add_to_phonebook("Pnakaj");
+		add_to_phonebook("Amit");
+	}
     std::cout << "Hello World!\n"; 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void clear_phonebook()
+{
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+}
+
+void initialize_phonebook()
+{
+	phonebook_size = 0;
+	clear_phonebook();
+}
+
+void add_to_phonebook(const char *data)
+{
+	phonebook *new_node = get_node(data);
+}
+
+int new_node_position()
+{
+
+	return 0;
+}
+
+phonebook* get_node(const char *data)
+{
+	phonebook *pb = new phonebook;
+	char* name = new char[10];
+	int len = Strlen(data);
+
+	for (int i = 0; i < len; i++)
+		name[i] = data[i];
+
+	pb->next = NULL;
+	pb->prev = NULL;
+
+	return pb;
+}
+
+int Strlen(const char* data)
+{
+	return 0;
+}
